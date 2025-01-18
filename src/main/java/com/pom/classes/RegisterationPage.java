@@ -88,14 +88,14 @@ public class RegisterationPage {
 
 	public void password() throws InterruptedException {
 		pass.clear();
-		pass.sendKeys("123456");
+		pass.sendKeys("murali123");
 		Thread.sleep(1000);
 
 	}
 
 	public void confirmpass() throws InterruptedException {
 		confirmpass.clear();
-		confirmpass.sendKeys("123456");
+		confirmpass.sendKeys("murali123");
 		Thread.sleep(1000);
 	}
 	
