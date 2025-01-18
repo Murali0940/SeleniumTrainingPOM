@@ -27,24 +27,21 @@ public class RegisterPage {
 
 	public void myaccount() throws InterruptedException {
 		myaccount.click();
-		Thread.sleep(1000);
+		
 	}
 
 	public void register() throws InterruptedException {
-		Thread.sleep(1000);
+		
 		register.click();
 	}
 
-	public void validate() {
+	public boolean validate() {
 		boolean validatetext = registeraccount.isDisplayed();
-		System.out.println("register account text is " + validatetext);	
+		return 	validatetext;
 	}
 	
-	public void validateurl() {
+	public String validateurl() {
 		String actualurl = driver.getCurrentUrl();
-		String expectedUrl = "https://tutorialsninja.com/demo/index.php?route=account/register";
-		
-		Assert.assertEquals(expectedUrl, actualurl);
-		
+		return 	actualurl;
 	}
 }
