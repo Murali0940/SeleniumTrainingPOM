@@ -1,5 +1,6 @@
 package com.testclasses;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.basemethod.BaseClass;
@@ -12,8 +13,15 @@ public class RegisterTest extends BaseClass{
 		RegisterPage rp = new RegisterPage(driver);
 		rp.myaccount();
 		rp.register();
-		rp.validate();
-		rp.validateurl();
+		boolean validate = rp.validate();
+		Assert.assertTrue(validate);
+		String validateurl = rp.validateurl();
+		//
+		
+		String validateurl2 = rp.validateurl();
+		
+		boolean contains = validateurl2.contains("register");
+		Assert.assertTrue(contains);
 	}
 	
 	
