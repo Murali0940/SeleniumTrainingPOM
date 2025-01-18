@@ -45,10 +45,10 @@ public class RegisterationPage {
 	@FindBy(xpath = "//a[text()='Continue']")
 	WebElement sucesscontinuebtn;
 	
-
+// you should not used reusable method inside pom 
 	public void firstName() throws InterruptedException {
 		firstname.clear();
-		String randomfname = RandomStringUtils.randomAlphabetic(6);
+		String randomfname = RandomStringUtils.randomAlphabetic(6); // put in base class
 		firstname.sendKeys(randomfname.toLowerCase());
 		System.out.println("Firstname "+randomfname.toLowerCase());
 		Thread.sleep(1000);
@@ -57,7 +57,7 @@ public class RegisterationPage {
 
 	public void lastName() throws InterruptedException {
 		lastname.clear();
-		String randomlname = RandomStringUtils.randomAlphabetic(6);
+		String randomlname = RandomStringUtils.randomAlphabetic(6);// put in base class
 		lastname.sendKeys(randomlname.toLowerCase());
 		System.out.println("Lastname: "+randomlname.toLowerCase());
 		Thread.sleep(1000);
@@ -66,8 +66,8 @@ public class RegisterationPage {
 
 	public void mail() throws InterruptedException {
 		email.clear();
-		String randommailletter = RandomStringUtils.randomAlphabetic(3);
-		String randommailnumber = RandomStringUtils.randomNumeric(2);
+		String randommailletter = RandomStringUtils.randomAlphabetic(3);// put in base class
+		String randommailnumber = RandomStringUtils.randomNumeric(2);// put in base class
 
 		email.sendKeys(randommailletter + randommailnumber + "@gmail.com".toLowerCase());
 		System.out.println("E-mail: "+randommailletter + randommailnumber + "@gmail.com".toLowerCase());
@@ -77,7 +77,7 @@ public class RegisterationPage {
 
 	public void telphone() throws InterruptedException {
 		telephone.clear();
-		String randomtel = RandomStringUtils.randomNumeric(10);
+		String randomtel = RandomStringUtils.randomNumeric(10);// put in base class
 
 		telephone.sendKeys(randomtel);
 		System.out.println("Telephone: "+randomtel);
@@ -88,7 +88,7 @@ public class RegisterationPage {
 
 	public void password() throws InterruptedException {
 		pass.clear();
-		pass.sendKeys("murali123");
+		pass.sendKeys("murali123"); // --> do not hard code the datas 
 		Thread.sleep(1000);
 
 	}
