@@ -36,8 +36,8 @@ public class RegisterPage {
 	}
 
 	public void validate() {
-		boolean text = registeraccount.isDisplayed();
-		System.out.println("register account text is " + text);	
+		boolean validatetext = registeraccount.isDisplayed();
+		System.out.println("register account text is " + validatetext);	
 	}
 	
 	public void validateurl() {
