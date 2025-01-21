@@ -1,5 +1,6 @@
 package com.testclasses;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
 
 import com.pom.classes.RegisterationPage;
@@ -13,7 +14,8 @@ public class RegisterationPageTest extends RegisterTest{
 		RegisterTest rt = new RegisterTest();
 		rt.registerpage();
 		RegisterationPage rp = new RegisterationPage(driver);
-		rp.firstName();
+		rp.firstName(ran);
+		
 		rp.lastName();
 		rp.mail();
 		rp.telphone();

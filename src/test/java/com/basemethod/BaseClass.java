@@ -2,6 +2,7 @@ package com.basemethod;
 
 import java.time.Duration;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 
 	public static WebDriver driver;
+	RandomStringUtils rsu;
 
 	@BeforeSuite
 	public void setup() {
@@ -30,7 +32,15 @@ public class BaseClass {
 
 		driver.get(URL);
 	}
+
+	public String generateRandomString(int length) {
+        return RandomStringUtils.randomAlphanumeric(length);
+    }
+	public String generateRandomnumber(int length) {
+        return RandomStringUtils.randomNumeric();
+    }
 	
+
 	@AfterSuite
 	public void teardown() {
 		driver.quit();

@@ -17,6 +17,8 @@ public class RegisterationPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	String fname;
 
 	@FindBy(id = "input-firstname")
 	WebElement firstname;
@@ -46,12 +48,15 @@ public class RegisterationPage {
 	WebElement sucesscontinuebtn;
 	
 
-	public void firstName() throws InterruptedException {
+	public String firstName(String fname) throws InterruptedException {
 		firstname.clear();
-		String randomfname = RandomStringUtils.randomAlphabetic(6);
-		firstname.sendKeys(randomfname.toLowerCase());
-		System.out.println("Firstname "+randomfname.toLowerCase());
+		firstname.sendKeys(fname);
 		Thread.sleep(1000);
+		return fname;
+		
+//		String randomfname = RandomStringUtils.randomAlphabetic(6);
+//		firstname.sendKeys(randomfname.toLowerCase());
+//		System.out.println("Firstname "+randomfname.toLowerCase());
 
 	}
 
