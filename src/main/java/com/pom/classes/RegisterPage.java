@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class RegisterPage {
 
@@ -27,12 +26,13 @@ public class RegisterPage {
 
 	public void myaccount() throws InterruptedException {
 		myaccount.click();
-		
+		Thread.sleep(1000);
 	}
 
 	public void register() throws InterruptedException {
 		
 		register.click();
+		Thread.sleep(1000);
 	}
 
 	public boolean validate() {

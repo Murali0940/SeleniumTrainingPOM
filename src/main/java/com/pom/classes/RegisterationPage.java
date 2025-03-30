@@ -10,8 +10,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.basemethod.BaseClass;
+
 public class RegisterationPage {
-	public WebDriver driver;
+	protected WebDriver driver;
+	BaseClass bc;
 
 	public RegisterationPage(WebDriver driver) {
 		this.driver = driver;
@@ -48,8 +51,8 @@ public class RegisterationPage {
 // you should not used reusable method inside pom 
 	public void firstName() throws InterruptedException {
 		firstname.clear();
-		String randomfname = RandomStringUtils.randomAlphabetic(6); // put in base class
-		firstname.sendKeys(randomfname.toLowerCase());
+		String randomfname = bc.getRandomString(); // put in base class
+		firstname.sendKeys(randomfname);
 		System.out.println("Firstname "+randomfname.toLowerCase());
 		Thread.sleep(1000);
 

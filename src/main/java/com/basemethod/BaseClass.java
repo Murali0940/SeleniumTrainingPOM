@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 
 	public static WebDriver driver;
-	RandomStringUtils rsu;
+	public RandomStringUtils rsu;
 
 	@BeforeSuite
 	public void setup() {
@@ -33,11 +33,12 @@ public class BaseClass {
 		driver.get(URL);
 	}
 
-	public String generateRandomString(int length) {
-        return RandomStringUtils.randomAlphanumeric(length);
-    }
-	public String generateRandomnumber(int length) {
-        return RandomStringUtils.randomNumeric();
+	public String getRandomString() {
+	     return RandomStringUtils.randomAlphanumeric(6);
+	}
+	
+	public void generateRandomnumber() {
+         RandomStringUtils.randomNumeric(10);
     }
 	
 

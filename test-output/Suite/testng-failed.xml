@@ -6,7 +6,9 @@
       <class name="com.testclasses.RegisterationPageTest">
         <methods>
           <include name="registerationPageTest"/>
+          <include name="registerpage"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- com.testclasses.RegisterationPageTest -->
     </classes>

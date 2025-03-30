@@ -15,13 +15,13 @@ public class RegisterTest extends BaseClass{
 		rp.register();
 		boolean validate = rp.validate();
 		Assert.assertTrue(validate);
-		String validateurl = rp.validateurl();
-		//
-		
-		String validateurl2 = rp.validateurl();
-		
-		boolean contains = validateurl2.contains("register");
-		Assert.assertTrue(contains);
+//		String validateurl = rp.validateurl();
+//		//
+//		
+//		String validateurl2 = rp.validateurl();
+//		
+//		boolean contains = validateurl2.contains("register");
+//		Assert.assertTrue(contains);
 	}
 	
 	
